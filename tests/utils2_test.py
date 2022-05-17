@@ -1,5 +1,5 @@
 import pytest
-from utils import get_post_by_pk, get_posts_by_user
+from utils import get_post_by_pk
 
 pk_parameters = [
     (1, 1),

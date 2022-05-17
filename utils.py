@@ -29,7 +29,7 @@ def get_comments_by_post_id(post_id):
         if post_id == post["post_id"]:
             result.append(post)
     if len(result) == 0:
-        raise IndexError("Такого id нет в списке")
+        return ""
     return result
 
 
@@ -38,7 +38,7 @@ def search_for_posts(query):
     result_posts = []
     counter = 0
     for post in all_posts:
-        if re.search(r'\b' + query.lower() + r'\b', post['content']):
+        if query.lower() in post["content"].lower():
             result_posts.append(post)
             counter += 1
         if counter == 10:

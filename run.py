@@ -2,7 +2,7 @@ from flask import Flask
 
 import logger
 from api.api_main import api_blueprint
-from main import main_blueprint
+from main_directory.main import main_blueprint
 
 
 app = Flask(__name__)

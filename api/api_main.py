@@ -1,6 +1,6 @@
 import logging
 
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, jsonify
 from utils import get_posts_all, get_post_by_pk
 
 api_blueprint = Blueprint('api_blueprint', __name__)

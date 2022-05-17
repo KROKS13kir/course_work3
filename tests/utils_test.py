@@ -1,5 +1,5 @@
 import pytest
-from utils import get_posts_by_user, get_post_by_pk, get_comments_by_post_id
+from utils import get_posts_by_user
 
 posts_parameters = [
     ("leo", "leo"),
