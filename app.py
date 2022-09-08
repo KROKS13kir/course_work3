@@ -14,4 +14,5 @@ logger.create_logger()
 app.register_blueprint(main_blueprint)
 app.register_blueprint(api_blueprint)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
