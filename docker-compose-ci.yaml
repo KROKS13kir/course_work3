@@ -4,4 +4,4 @@ services:
   api:
     image: kroks/skyprogram:$GITHUB_REF_NAME-$GITHUBRUN_ID
     ports:
-    - 8080:80
+    - 80:80
