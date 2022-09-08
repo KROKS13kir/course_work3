@@ -29,14 +29,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "deploy/docker-compose.yaml"
-          target: "flask_app_ci"
+          target: "flask_app_ci_new"
           strip_components: 1
-            - name: deploy app
-              uses: appleboy/ssh-action@master
-              with:
-                host: ${{ secrets.HOST }}
-                username: ${{ secrets.USERNAME }}
-                password: ${{ secrets.PASSWORD }}
-                script: |
-                  cd flask_app_ci
-                  echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d
+      - name: deploy app
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd flask_app_ci_new
+            echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d

@@ -4,4 +4,4 @@ services:
   api:
     image: kroks/skyprogram:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
-    - 5000:5000
+    - 25000:25000
